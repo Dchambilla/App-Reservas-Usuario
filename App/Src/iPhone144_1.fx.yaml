@@ -1,0 +1,682 @@
+iPhone144_1 As screen:
+    Height: =844
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    Width: =390
+
+    "'Rectangle 4_3' As rectangle":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(0, 56, 101, 1)
+        FocusedBorderThickness: =4
+        Height: =118
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =390
+        ZIndex: =1
+
+    "'Group 2_3' As groupContainer.manualLayoutContainer":
+        Height: =18
+        LayoutMode: ="manual"
+        Width: =34
+        X: =5
+        Y: =52
+        ZIndex: =2
+
+        "'Line 1_3' As rectangle":
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(128, 128, 128, 1)
+            FocusedBorderThickness: =4
+            Height: =0
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Width: =34
+            ZIndex: =3
+
+        "'Line 2_3' As rectangle":
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(128, 128, 128, 1)
+            FocusedBorderThickness: =4
+            Height: =0
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Width: =34
+            Y: =9
+            ZIndex: =4
+
+        "'Line 3_3' As rectangle":
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(128, 128, 128, 1)
+            FocusedBorderThickness: =4
+            Height: =0
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Width: =34
+            Y: =18
+            ZIndex: =5
+
+    "'Ellipse 1_3' As image":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =75
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: =User().Image
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Width: =75
+        X: =309.403076171875
+        Y: =18
+        ZIndex: =6
+
+    "'escudo 2_3' As image":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =76
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: =image29140
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =62
+        X: =163
+        Y: =23
+        ZIndex: =7
+
+    "'Rectangle 12_3' As rectangle":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(0, 56, 101, 1)
+        FocusedBorderThickness: =4
+        Height: =41
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =303
+        Y: =119
+        ZIndex: =8
+
+    "'Reserva de espacios deportivos_2' As label":
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(255, 251.8125, 251.8125, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Height: =25
+        LineHeight: =1.361816
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =13.5
+        Text: ="Reserva de espacios deportivos"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =268
+        X: =7
+        Y: =127
+        ZIndex: =9
+
+    "'Rectangle 28_2' As image":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =41
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: =image31169
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =292
+        Y: =168
+        ZIndex: =10
+
+    "'Gimnasio A, Vie, 25 de Ene_1' As label":
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Height: =25
+        LineHeight: =1.361816
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =13.5
+        Text: ="Gimnasio A, Vie, 25 de Ene"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =226
+        X: =6
+        Y: =176
+        ZIndex: =11
+
+    "'Rectangle 28_3' As rectangle":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(0, 56, 101, 1)
+        FocusedBorderThickness: =4
+        Height: =66
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =195
+        Y: =243
+        ZIndex: =12
+
+    "'Rectangle 36_1' As rectangle":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(0, 56, 101, 1)
+        FocusedBorderThickness: =4
+        Height: =66
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =195
+        Y: =243
+        ZIndex: =13
+
+    "'Rectangle 37_1' As rectangle":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(0, 56, 101, 1)
+        FocusedBorderThickness: =4
+        Height: =66
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =195
+        X: =193
+        Y: =309
+        ZIndex: =14
+
+    "'Rectangle 29_1' As rectangle":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(0, 56, 101, 1)
+        FocusedBorderThickness: =4
+        Height: =66
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =195
+        X: =193
+        Y: =243
+        ZIndex: =15
+
+    "'Rectangle 35_1' As rectangle":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(254, 161, 1, 1)
+        FocusedBorderThickness: =4
+        Height: =66
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =195
+        Y: =309
+        ZIndex: =16
+
+    "'Rectangle 43_1' As rectangle":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(0, 56, 101, 1)
+        FocusedBorderThickness: =4
+        Height: =66
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =195
+        Y: =507
+        ZIndex: =17
+
+    "'Rectangle 44_1' As rectangle":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(254, 161, 1, 1)
+        FocusedBorderThickness: =4
+        Height: =66
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =195
+        Y: =507
+        ZIndex: =18
+
+    "'Rectangle 45_1' As rectangle":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(254, 161, 1, 1)
+        FocusedBorderThickness: =4
+        Height: =66
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =195
+        X: =194
+        Y: =573
+        ZIndex: =19
+
+    "'Rectangle 46_1' As rectangle":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(0, 56, 101, 1)
+        FocusedBorderThickness: =4
+        Height: =66
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =195
+        X: =194
+        Y: =507
+        ZIndex: =20
+
+    "'Rectangle 47_1' As rectangle":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(0, 56, 101, 1)
+        FocusedBorderThickness: =4
+        Height: =66
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =195
+        Y: =573
+        ZIndex: =21
+
+    "'19:00 HRS RESERVADO_1' As label":
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Height: =50
+        LineHeight: =1.361816
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =13.5
+        Text: |-
+            ="19:00 HRS RESERVADO"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =186
+        Y: =582
+        ZIndex: =22
+
+    "'10:00 HRS RESERVADO_2' As label":
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(0, 56, 101, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Height: =50
+        LineHeight: =1.361816
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =13.5
+        Text: |-
+            ="10:00 HRS RESERVADO"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =186
+        X: =201
+        Y: =251
+        ZIndex: =23
+
+    "'Rectangle 38_1' As rectangle":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(0, 56, 101, 1)
+        FocusedBorderThickness: =4
+        Height: =66
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =195
+        Y: =375
+        ZIndex: =24
+
+    "'Rectangle 39_1' As rectangle":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(0, 56, 101, 1)
+        FocusedBorderThickness: =4
+        Height: =66
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =195
+        Y: =375
+        ZIndex: =25
+
+    "'Rectangle 40_1' As rectangle":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(0, 56, 101, 1)
+        FocusedBorderThickness: =4
+        Height: =66
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =195
+        X: =195
+        Y: =441
+        ZIndex: =26
+
+    "'Rectangle 41_1' As rectangle":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(254, 161, 1, 1)
+        FocusedBorderThickness: =4
+        Height: =66
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =195
+        X: =194
+        Y: =375
+        ZIndex: =27
+
+    "'Rectangle 42_1' As rectangle":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(0, 56, 101, 1)
+        FocusedBorderThickness: =4
+        Height: =66
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =195
+        Y: =441
+        ZIndex: =28
+
+    "'9:00 HRS RESERVADO_1' As label":
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Height: =50
+        LineHeight: =1.361816
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =13.5
+        Text: |-
+            ="9:00 HRS 
+            RESERVADO"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =106
+        X: =45
+        Y: =251
+        ZIndex: =29
+
+    "'16:00 HRS RESERVADO_1' As label":
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Height: =50
+        LineHeight: =1.361816
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =13.5
+        Text: |-
+            ="16:00 HRS 
+            RESERVADO"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =106
+        X: =242
+        Y: =449
+        ZIndex: =30
+
+    "'20:00 HRS LIBRE_1' As label":
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(0, 56, 101, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Height: =50
+        LineHeight: =1.361816
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =13.5
+        Text: |-
+            ="20:00 HRS 
+            LIBRE"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =94
+        X: =248
+        Y: =581
+        ZIndex: =31
+
+    "'17:00 HRS LIBRE_1' As label":
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(0, 56, 101, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Height: =50
+        LineHeight: =1.361816
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =13.5
+        Text: |-
+            ="17:00 HRS 
+            LIBRE"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =94
+        X: =53
+        Y: =515
+        ZIndex: =32
+
+    "'12:00 HRS RESERVADO_1' As label":
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Height: =50
+        LineHeight: =1.361816
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =13.5
+        Text: |-
+            ="12:00 HRS RESERVADO"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =186
+        X: =201
+        Y: =317
+        ZIndex: =33
+
+    "'10:00 HRS RESERVADO_3' As label":
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Height: =50
+        LineHeight: =1.361816
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =13.5
+        Text: |-
+            ="10:00 HRS RESERVADO"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =186
+        X: =201
+        Y: =251
+        ZIndex: =34
+
+    "'15:00 HRS RESERVADO_1' As label":
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Height: =50
+        LineHeight: =1.361816
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =13.5
+        Text: |-
+            ="15:00 HRS RESERVADO"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =186
+        X: =5
+        Y: =449
+        ZIndex: =35
+
+    "'18:00 HRS RESERVADO_1' As label":
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Height: =50
+        LineHeight: =1.361816
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =13.5
+        Text: |-
+            ="18:00 HRS RESERVADO"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =186
+        X: =201
+        Y: =515
+        ZIndex: =36
+
+    "'10:00 HRS LIBRE_1' As label":
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(0, 56, 101, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Height: =50
+        LineHeight: =1.361816
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =13.5
+        Text: |-
+            ="10:00 HRS 
+            LIBRE"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =186
+        Y: =317
+        ZIndex: =37
+
+    "'14:00 HRS LIBRE_1' As label":
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(0, 56, 101, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Height: =50
+        LineHeight: =1.361816
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =13.5
+        Text: |-
+            ="14:00 HRS 
+            LIBRE"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =186
+        X: =200
+        Y: =383
+        ZIndex: =38
+
+    "'13:00 HRS RESERVADO_1' As label":
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Height: =50
+        LineHeight: =1.361816
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =13.5
+        Text: |-
+            ="13:00 HRS RESERVADO"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =186
+        Y: =383
+        ZIndex: =39
+

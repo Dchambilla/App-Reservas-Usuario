@@ -1,0 +1,54 @@
+{
+  "856132f2-6021-4b79-8f24-1cb61d2cba7e": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read",
+      "providers/PowerPlatform.Governance/Operations/Write",
+      "providers/PowerPlatform.Governance/Operations/Delete"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://udeconce-my.sharepoint.com/personal/jchavarria2018_udec_cl": {
+        "dataSources": {
+          "EspaciosDeportivos": {
+            "tableName": "6869ef84-b3e8-4371-8fdd-0017e762aed3"
+          },
+          "Reservas": {
+            "tableName": "93f5da21-7700-4bf0-9f7b-438ace867e3c"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Reservas",
+      "EspaciosDeportivos"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "856132f2-6021-4b79-8f24-1cb61d2cba7e"
+  },
+  "f6090449-60d8-495a-bb7f-06ffc6ead8e4": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office\u00A0365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Outlook"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "f6090449-60d8-495a-bb7f-06ffc6ead8e4"
+  }
+}
