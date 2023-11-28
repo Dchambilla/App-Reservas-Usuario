@@ -1,3 +1,94 @@
 Screen2 As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
+    CompositePieChart5 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+        PieChart5 As pieChart:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Segoe UI'
+            Height: =725
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+            Items: |
+                =Filter(Reservas, EspacioSeleccionado.Value = Dropdown2_3.SelectedText.Value)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            Size: =24
+            Width: =640
+            Y: =160
+            ZIndex: =3
+
+        Legend6 As legend:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(220, 220, 220, 1)
+            Font: =Font.'Segoe UI'
+            Height: =346
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            ItemColorSet: =PieChart5.ItemColorSet
+            Items: =PieChart5.SeriesLabels
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            Size: =16
+            Width: =640
+            Y: =790
+            ZIndex: =4
+
+    SelectorEspacioDeportivo_2 As group:
+        Height: =5
+        Width: =5
+        X: =33
+        Y: =36
+        ZIndex: =7
+
+        Dropdown2_3 As dropdown:
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(0, 18, 107, 1)
+            ChevronBackground: =RGBA(56, 96, 178, 1)
+            ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+            ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+            ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            ChevronHoverFill: =RGBA(255, 255, 255, 1)
+            Default: =
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =RGBA(186, 202, 226, 1)
+            Items: =Distinct(Filter(Reservas, Usuario.Email = User().Email),EspacioDeportivo.Value)
+            OnChange: =Set(EspacioSeleccionado,Dropdown2_3.Selected.Value)
+            OnSelect: =
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 18, 107, 1)
+            SelectionFill: =RGBA(56, 96, 178, 1)
+            Size: =13
+            X: =156
+            Y: =76
+            ZIndex: =5
+
+        Label1_3 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Lato Black'
+            FontWeight: =FontWeight.Bold
+            Height: =38
+            Size: =13
+            Text: ="Espacio Deportivo"
+            Width: =332
+            X: =154
+            Y: =31
+            ZIndex: =6
+
