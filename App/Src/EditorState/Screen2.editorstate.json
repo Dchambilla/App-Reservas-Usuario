@@ -861,7 +861,7 @@
       "Properties": [
         {
           "Category": "Data",
-          "NameMap": "{\"Labels\":\"Id\",\"Series\":\"Id\"}",
+          "NameMap": "{\"Labels\":\"Percentage\",\"Series\":\"Percentage\"}",
           "PropertyName": "Items",
           "RuleProviderType": "Unknown"
         },
