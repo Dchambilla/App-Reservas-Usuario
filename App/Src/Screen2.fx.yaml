@@ -32,7 +32,7 @@ Screen2 As screen:
                             Reservas,
                             Text(EspacioDeportivo.Value) = Dropdown2_3.SelectedText.Value
                         ),
-                        { Id: Usuario.Email, Department: Usuario.Department }
+                        { Id : EspacioDeportivo.Value, Fecha1: FechaInicio , Department: Usuario.Department }
                     )
                 )
             OnSelect: =
@@ -108,7 +108,7 @@ Screen2 As screen:
             Height: =297
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             ItemColorSet: =PieChart2.ItemColorSet
-            Items: =PieChart2.SeriesLabels
+            Items: =DatosGrafico.Department
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             Size: =16
             Width: =600

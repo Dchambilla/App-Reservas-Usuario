@@ -708,7 +708,7 @@
       "Properties": [
         {
           "Category": "Data",
-          "NameMap": "{\"Value\":\"Value\"}",
+          "NameMap": "{\"Value\":\"Department\"}",
           "PropertyName": "Items",
           "RuleProviderType": "Unknown"
         },
@@ -861,7 +861,7 @@
       "Properties": [
         {
           "Category": "Data",
-          "NameMap": "{\"Labels\":\"Department\",\"Series\":\"Id\"}",
+          "NameMap": "{\"Labels\":\"Id\",\"Series\":\"Id\"}",
           "PropertyName": "Items",
           "RuleProviderType": "Unknown"
         },
