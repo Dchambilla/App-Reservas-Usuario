@@ -623,7 +623,9 @@ Screen4 As screen:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-            OnSelect: =Set(varShowPopUp,false); // En caso de que ya no se quiera confirmar la reserva, ocultar el popup de confirmación de reserva
+            OnSelect: |-
+                =// Establece la variable varShowPopUp en falso, en caso de que ya no se quiera confirmar la reserva, para ocultar el popup de confirmación de reserva.
+                Set(varShowPopUp,false);
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -636,7 +638,7 @@ Screen4 As screen:
             Visible: =varShowPopUp
             Width: =172
             X: =326
-            Y: =634
+            Y: =632
             ZIndex: =34
 
         Button3_1 As button:
@@ -653,7 +655,8 @@ Screen4 As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
             OnSelect: |-
-                =ClearCollect(
+                =// Colección auxiliar para almacenar información sobre la fecha seleccionada en el calendario
+                ClearCollect(
                     AuxCollection,
                     Table(
                         {
@@ -679,12 +682,12 @@ Screen4 As screen:
                                 "viernes", "Viernes",
                                 "sábado", "Sábado",
                                 "domingo", "Domingo",
-                                "OtroValor"  // Valor por defecto en caso de que el día no coincida con ninguno de los anteriores
+                                "Valor"  // Valor por defecto en caso de que el día no coincida con ninguno de los anteriores
                             )
                         }
                     )
                 );
-                
+                // Creación o actualización de una reserva en la tabla Reservas
                 Patch(
                     Reservas,
                     Defaults(Reservas),
@@ -702,15 +705,19 @@ Screen4 As screen:
                         },
                         FechaInicio: DateValue(_dateSelected) + TimeValue(Left(aux, Find(" - ", aux) - 1)),
                         FechaTermino: DateValue(_dateSelected) + TimeValue(Mid(aux, Find(" - ", aux) + 3, Len(aux))),
-                        EspacioDeportivo: Dropdown2_6.Selected,
-                        Dias: AuxCollection
+                        EspacioDeportivo: Dropdown2_6.Selected, // Espacio deportivo seleccionado en el dropdown
+                        Dias: AuxCollection  // Días de la semana seleccionados en la colección auxiliar
                     }
                 );
+                // Filtra reservas para incluir solo aquellas asociadas al espacio deportivo seleccionado
                 Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));
+                // Filtra reservas adicionales por fecha dentro del rango definido por FechaInicio y FechaTermino
                 Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected<= DateValue(FechaTermino)));
+                // Filtra reservas adicionales por días específicos de la semana (si se han definido en la columna 'Dias')
                 Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
-                Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
+                // Convierte el día seleccionado a mayúsculas y guarda en la colección DiaSeleccionado
                 ClearCollect(DiaSeleccionado,Upper(Left(Text(_dateSelected, "dddd"), 1)) & Mid(Text(_dateSelected, "dddd"), 2, Len(Text(_dateSelected, "dddd"))));
+                // Oculta el PopUp de confirmación de reserva una vez que se ha enviado el formulario de solicitud
                 Set(varShowPopUp,false)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
