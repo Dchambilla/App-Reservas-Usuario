@@ -431,9 +431,7 @@ Screen4 As screen:
                 DisplayMode: =If(Subtitle2_1.Text = "Reservado", DisplayMode.Disabled)
                 Height: =47
                 Icon: =Icon.ChevronRight
-                OnSelect: |-
-                    =Set(aux,ThisItem.Value);
-                    Set(varShowPopUp,true)
+                OnSelect: =
                 Width: =51
                 X: =551
                 Y: =23
