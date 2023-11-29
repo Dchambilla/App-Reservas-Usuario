@@ -183,7 +183,7 @@ iPhone144 As screen:
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =195
-        Y: =243
+        Y: =445
         ZIndex: =12
 
     "'Rectangle 36' As rectangle":
@@ -196,7 +196,7 @@ iPhone144 As screen:
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =195
-        Y: =243
+        Y: =445
         ZIndex: =13
 
     "'Rectangle 37' As rectangle":
@@ -210,7 +210,7 @@ iPhone144 As screen:
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =195
         X: =193
-        Y: =309
+        Y: =511
         ZIndex: =14
 
     "'Rectangle 29' As rectangle":
@@ -224,7 +224,7 @@ iPhone144 As screen:
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =195
         X: =193
-        Y: =243
+        Y: =445
         ZIndex: =15
 
     "'Rectangle 35' As rectangle":
@@ -237,7 +237,7 @@ iPhone144 As screen:
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =195
-        Y: =309
+        Y: =511
         ZIndex: =16
 
     "'Rectangle 43' As rectangle":
@@ -250,7 +250,7 @@ iPhone144 As screen:
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =195
-        Y: =507
+        Y: =709
         ZIndex: =17
 
     "'Rectangle 44' As rectangle":
@@ -263,7 +263,7 @@ iPhone144 As screen:
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =195
-        Y: =507
+        Y: =709
         ZIndex: =18
 
     "'Rectangle 45' As rectangle":
@@ -277,7 +277,7 @@ iPhone144 As screen:
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =195
         X: =194
-        Y: =573
+        Y: =775
         ZIndex: =19
 
     "'Rectangle 46' As rectangle":
@@ -291,7 +291,7 @@ iPhone144 As screen:
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =195
         X: =194
-        Y: =507
+        Y: =709
         ZIndex: =20
 
     "'Rectangle 47' As rectangle":
@@ -304,7 +304,7 @@ iPhone144 As screen:
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =195
-        Y: =573
+        Y: =775
         ZIndex: =21
 
     "'19:00 HRS RESERVADO' As label":
@@ -326,7 +326,7 @@ iPhone144 As screen:
             ="19:00 HRS RESERVADO"
         VerticalAlign: =VerticalAlign.Top
         Width: =186
-        Y: =582
+        Y: =784
         ZIndex: =22
 
     "'10:00 HRS RESERVADO' As label":
@@ -349,7 +349,7 @@ iPhone144 As screen:
         VerticalAlign: =VerticalAlign.Top
         Width: =186
         X: =201
-        Y: =251
+        Y: =453
         ZIndex: =23
 
     "'Rectangle 38' As rectangle":
@@ -362,7 +362,7 @@ iPhone144 As screen:
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =195
-        Y: =375
+        Y: =577
         ZIndex: =24
 
     "'Rectangle 39' As rectangle":
@@ -375,7 +375,7 @@ iPhone144 As screen:
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =195
-        Y: =375
+        Y: =577
         ZIndex: =25
 
     "'Rectangle 40' As rectangle":
@@ -389,7 +389,7 @@ iPhone144 As screen:
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =195
         X: =195
-        Y: =441
+        Y: =643
         ZIndex: =26
 
     "'Rectangle 41' As rectangle":
@@ -403,7 +403,7 @@ iPhone144 As screen:
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =195
         X: =194
-        Y: =375
+        Y: =577
         ZIndex: =27
 
     "'Rectangle 42' As rectangle":
@@ -416,7 +416,7 @@ iPhone144 As screen:
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =195
-        Y: =441
+        Y: =643
         ZIndex: =28
 
     "'9:00 HRS RESERVADO' As label":
@@ -440,7 +440,7 @@ iPhone144 As screen:
         VerticalAlign: =VerticalAlign.Top
         Width: =106
         X: =45
-        Y: =251
+        Y: =453
         ZIndex: =29
 
     "'16:00 HRS RESERVADO' As label":
@@ -464,7 +464,7 @@ iPhone144 As screen:
         VerticalAlign: =VerticalAlign.Top
         Width: =106
         X: =242
-        Y: =449
+        Y: =651
         ZIndex: =30
 
     "'20:00 HRS LIBRE' As label":
@@ -488,7 +488,7 @@ iPhone144 As screen:
         VerticalAlign: =VerticalAlign.Top
         Width: =94
         X: =248
-        Y: =581
+        Y: =783
         ZIndex: =31
 
     "'17:00 HRS LIBRE' As label":
@@ -512,7 +512,7 @@ iPhone144 As screen:
         VerticalAlign: =VerticalAlign.Top
         Width: =94
         X: =53
-        Y: =515
+        Y: =717
         ZIndex: =32
 
     "'12:00 HRS RESERVADO' As label":
@@ -535,7 +535,7 @@ iPhone144 As screen:
         VerticalAlign: =VerticalAlign.Top
         Width: =186
         X: =201
-        Y: =317
+        Y: =519
         ZIndex: =33
 
     "'10:00 HRS RESERVADO_1' As label":
@@ -558,7 +558,7 @@ iPhone144 As screen:
         VerticalAlign: =VerticalAlign.Top
         Width: =186
         X: =201
-        Y: =251
+        Y: =453
         ZIndex: =34
 
     "'15:00 HRS RESERVADO' As label":
@@ -581,7 +581,7 @@ iPhone144 As screen:
         VerticalAlign: =VerticalAlign.Top
         Width: =186
         X: =5
-        Y: =449
+        Y: =651
         ZIndex: =35
 
     "'18:00 HRS RESERVADO' As label":
@@ -604,7 +604,7 @@ iPhone144 As screen:
         VerticalAlign: =VerticalAlign.Top
         Width: =186
         X: =201
-        Y: =515
+        Y: =717
         ZIndex: =36
 
     "'10:00 HRS LIBRE' As label":
@@ -627,7 +627,7 @@ iPhone144 As screen:
             LIBRE"
         VerticalAlign: =VerticalAlign.Top
         Width: =186
-        Y: =317
+        Y: =519
         ZIndex: =37
 
     "'14:00 HRS LIBRE' As label":
@@ -651,7 +651,7 @@ iPhone144 As screen:
         VerticalAlign: =VerticalAlign.Top
         Width: =186
         X: =200
-        Y: =383
+        Y: =585
         ZIndex: =38
 
     "'13:00 HRS RESERVADO' As label":
@@ -673,6 +673,6 @@ iPhone144 As screen:
             ="13:00 HRS RESERVADO"
         VerticalAlign: =VerticalAlign.Top
         Width: =186
-        Y: =383
+        Y: =585
         ZIndex: =39
 
