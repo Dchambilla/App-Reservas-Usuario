@@ -45,7 +45,7 @@ Screen4 As screen:
         Fill: =RGBA(0, 56, 101, 1)
         FocusedBorderThickness: =4
         Height: =141
-        HoverFill: =RGBA(0, 120, 212, 1)
+        HoverFill: =RGBA(0, 56, 101, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =640
         ZIndex: =1
@@ -74,7 +74,7 @@ Screen4 As screen:
         Fill: =RGBA(0, 56, 101, 1)
         FocusedBorderThickness: =4
         Height: =49
-        HoverFill: =RGBA(0, 120, 212, 1)
+        HoverFill: =RGBA(0, 56, 101, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =507
         X: =72

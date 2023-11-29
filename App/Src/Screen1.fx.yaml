@@ -52,11 +52,11 @@ Screen1 As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =12
-            Text: =ThisItem.FechaInicio
+            Text: =ThisItem.FechaInicio & " - " & Text(ThisItem.FechaTermino,DateTimeFormat.ShortTime)
             VerticalAlign: =VerticalAlign.Top
             Width: =Title1.Width
             X: =Title1.X
-            Y: =Title1.Y + Title1.Height
+            Y: =78
             ZIndex: =3
 
         NextArrow1 As icon.ChevronRight:
@@ -101,11 +101,11 @@ Screen1 As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =12
-            Text: =ThisItem.FechaTermino
+            Text: =Text(ThisItem.FechaTermino, "dddd")
             VerticalAlign: =VerticalAlign.Top
             Width: =Title1.Width
             X: =103
-            Y: =74
+            Y: =57
             ZIndex: =7
 
     Dropdown2_2 As dropdown:
