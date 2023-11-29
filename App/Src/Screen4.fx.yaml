@@ -118,11 +118,12 @@ Screen4 As screen:
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(186, 202, 226, 1)
         Items: =Choices([@Reservas].EspacioDeportivo)
-        OnChange: |
-            =Set(EspacioSeleccionado,Dropdown2_6.Selected.Value);
-            Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));
-            Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected<= DateValue(FechaTermino)));
-            Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
+        OnChange: |+
+            =Set(EspacioSeleccionado,Dropdown2_6.Selected.Value); // Seteo del espacio seleccionado basado en el valor seleccionado en el dropdown Dropdown2_6 
+            Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));// Filtrado de reservas para incluir solo aquellas asociadas al espacio deportivo seleccionado
+            Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected<= DateValue(FechaTermino))); // Filtrado adicional por fecha, seleccionando reservas dentro del rango definido por FechaInicio y FechaTermino
+            Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value)); // Filtrado adicional por días específicos de la semana (si se han definido en la columna 'Dias')
+            
         OnSelect: =
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 18, 107, 1)
@@ -172,10 +173,16 @@ Screen4 As screen:
             Height: =45
             Icon: =Icon.BackArrow
             OnSelect: |
-                =Set(_firstDayOfMonth, DateAdd(_firstDayOfMonth, -1, TimeUnit.Months));
+                =// Establece la variable _firstDayOfMonth al primer día del mes anterior
+                Set(_firstDayOfMonth, DateAdd(_firstDayOfMonth, -1, TimeUnit.Months));
+                // Establece _firstDayInView al primer día visible en el calendario actual, considerando el día de la semana
                 Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
+                // Establece _lastDayOfMonth al último día del mes anterior
                 Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
-                /*collects calendar events for all days in current month view. Updates _minDate to prevent duplicate data collection if user returns to this month view*/
+                /* 
+                   Recopila eventos del calendario para todos los días en la vista del mes actual. 
+                   Actualiza _minDate para evitar la recopilación de datos duplicados si el usuario vuelve a esta vista del mes.
+                */
                 If(_minDate > _firstDayOfMonth, Set(_minDate, _firstDayOfMonth));
             PaddingBottom: =7
             PaddingLeft: =7
@@ -203,10 +210,16 @@ Screen4 As screen:
             Height: =45
             Icon: =Icon.NextArrow
             OnSelect: |-
-                =Set(_firstDayOfMonth, DateAdd(_firstDayOfMonth, 1, TimeUnit.Months));
+                =// Establece la variable _firstDayOfMonth al primer día del próximo mes
+                Set(_firstDayOfMonth, DateAdd(_firstDayOfMonth, 1, TimeUnit.Months)); 
+                // Establece _firstDayInView al primer día visible en el calendario actual, considerando el día de la semana
                 Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
-                /*collects calendar events for all days in current month view. Updates _maxDate to prevent duplicate data collection if user returns to this month view*/
+                /* 
+                   Recopila eventos del calendario para todos los días en la vista del mes actual. 
+                   Actualiza _maxDate para evitar la recopilación de datos duplicados si el usuario vuelve a esta vista del mes.
+                */
                 Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
+                // Comprueba si _lastDayOfMonth es mayor que _maxDate y, si es así, actualiza _maxDate
                 If(_lastDayOfMonth > _maxDate, Set(_maxDate, _lastDayOfMonth);)
             PaddingBottom: =7
             PaddingLeft: =7
@@ -320,13 +333,18 @@ Screen4 As screen:
                 FocusedBorderColor: =Self.Color
                 FocusedBorderThickness: =2
                 Height: =MonthDayGallery1_5.TemplateHeight
-                OnSelect: |
-                    =Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, TimeUnit.Days));
+                OnSelect: |-
+                    =// Establece _dateSelected al día seleccionado en el calendario actual
+                    Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, TimeUnit.Days));
+                    // Establece EspacioSeleccionado al valor seleccionado en el dropdown de Espacio Seleccionado
                     Set(EspacioSeleccionado,Dropdown2_6.Selected.Value);
+                    // Filtra reservas para incluir solo aquellas asociadas al espacio deportivo seleccionado
                     Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));
+                    // Filtra reservas adicionales por fecha dentro del rango definido por FechaInicio y FechaTermino
                     Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected<= DateValue(FechaTermino)));
+                    // Filtra reservas adicionales por días específicos de la semana (si se han definido en la columna 'Dias')
                     Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
-                    Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
+                    // Convierte el día seleccionado a mayúsculas y guarda en la colección DiaSeleccionado
                     ClearCollect(DiaSeleccionado,Upper(Left(Text(_dateSelected, "dddd"), 1)) & Mid(Text(_dateSelected, "dddd"), 2, Len(Text(_dateSelected, "dddd"))));
                 Size: =12
                 TabIndex: =0
@@ -400,16 +418,32 @@ Screen4 As screen:
                 PaddingTop: =0
                 Size: =13
                 Text: |-
-                    =
+                    =// Condicional If: Verifica si hay alguna reserva en el horario y día específico seleccionado
                     If(
                         CountRows(
                             Filter(
-                                FiltradoFecha,
-                                TimeValue(FechaInicio) <= TimeValue(Left(ThisItem.Value, 5)) && TimeValue(FechaTermino) >= TimeValue(Right(ThisItem.Value, 5)) && Text(_dateSelected,"dddd") in Lower(Dias.Value)
+                                FiltradoFecha, // Filtrar reservas según la fecha seleccionada
+                                TimeValue(FechaInicio) <= TimeValue(  
+                                    // Verificar hora de inicio
+                                    Left(
+                                        ThisItem.Value,
+                                        5
+                                    ) 
+                                    // Verificar hora de termino
+                                ) && TimeValue(FechaTermino) >= TimeValue(
+                                    Right(
+                                        ThisItem.Value,
+                                        5
+                                    ) 
+                                    // Verificar si el día está dentro de los días permitidos
+                                ) && Text(
+                                    _dateSelected,
+                                    "dddd"
+                                ) in Lower(Dias.Value)
                             )
-                        ) > 0,
-                        "Reservado",
-                        "Disponible"
+                        ) > 0, // Si hay al menos una reserva
+                        "Reservado", // Valor devuelto si hay reservas
+                        "Disponible" // Valor devuelto si no hay reservas
                     )
                 VerticalAlign: =VerticalAlign.Top
                 Width: =107
@@ -423,7 +457,9 @@ Screen4 As screen:
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(220, 220, 220, 1)
                 DisabledFill: =RGBA(0, 0, 0, 0)
-                DisplayMode: =If(Subtitle2_1.Text = "Reservado", DisplayMode.Disabled)
+                DisplayMode: |-
+                    =// Verifica si el espacio está reservado; en tal caso, deshabilita el modo de visualización para impedir el envío de solicitudes de reservación.
+                    If(Subtitle2_1.Text = "Reservado", DisplayMode.Disabled)
                 FocusedBorderThickness: =4
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -548,7 +584,7 @@ Screen4 As screen:
             Font: =Font.'Segoe UI'
             Height: =71
             Size: =21
-            Text: =Text(_dateSelected,DateTimeFormat.ShortDate)
+            Text: =Text(_dateSelected,DateTimeFormat.ShortDate) // Fecha Seleccionada con formato de dia, mes y año
             Visible: =varShowPopUp
             Width: =261
             X: =301
@@ -567,7 +603,7 @@ Screen4 As screen:
             Height: =72
             Size: =21
             Text: |
-                =aux
+                =aux //Intervalo de Fecha Solicitada
             Visible: =varShowPopUp
             Width: =231
             X: =309
@@ -587,7 +623,7 @@ Screen4 As screen:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-            OnSelect: =Set(varShowPopUp,false)
+            OnSelect: =Set(varShowPopUp,false); // En caso de que ya no se quiera confirmar la reserva, ocultar el popup de confirmación de reserva
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)

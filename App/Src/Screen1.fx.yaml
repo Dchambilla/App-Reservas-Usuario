@@ -35,7 +35,7 @@ Screen1 As screen:
             Text: |-
                 ="Espacio Deportivo: " & ThisItem.EspacioDeportivo.Value
             VerticalAlign: =VerticalAlign.Top
-            Width: =287
+            Width: =427
             X: =103
             Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle1.Size * 1.8)) / 2
             ZIndex: =2
