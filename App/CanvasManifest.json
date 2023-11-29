@@ -130,12 +130,12 @@
     "UserLocale": "es-ES"
   },
   "ScreenOrder": [
-    "iPhone143",
     "iPhone142",
-    "iPhone141",
     "Screen3",
-    "iPhone144",
     "Screen1",
-    "Screen2"
+    "Screen2",
+    "iPhone144",
+    "iPhone144_1",
+    "iPhone143"
   ]
 }

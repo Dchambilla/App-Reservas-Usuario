@@ -421,7 +421,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Ellipse 1_2",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -712,7 +712,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "escudo 2_2",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2190,7 +2190,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label9",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
