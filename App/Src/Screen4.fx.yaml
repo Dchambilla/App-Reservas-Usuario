@@ -456,7 +456,7 @@ Screen4 As screen:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 120, 212, 1)
         Height: =65
-        OnSelect: =Navigate(Screen5)
+        OnSelect: =Navigate(Screen5) // Accion de retroceso a la pantalla principal
         Width: =65
         X: =40
         Y: =38
