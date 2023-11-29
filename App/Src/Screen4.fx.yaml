@@ -397,13 +397,13 @@ Screen4 As screen:
                 PaddingRight: =0
                 PaddingTop: =0
                 Size: =13
-                Text: |
+                Text: |-
                     =
                     If(
                         CountRows(
                             Filter(
                                 FiltradoFecha,
-                                TimeValue(FechaInicio) <= TimeValue(Left(ThisItem.Value, 5)) && TimeValue(FechaTermino) >= TimeValue(Right(ThisItem.Value, 5))
+                                TimeValue(FechaInicio) <= TimeValue(Left(ThisItem.Value, 5)) && TimeValue(FechaTermino) >= TimeValue(Right(ThisItem.Value, 5)) && Text(_dateSelected,"dddd") in Lower(Dias.Value)
                             )
                         ) > 0,
                         "Reservado",
@@ -664,10 +664,11 @@ Screen4 As screen:
                         },
                         FechaInicio: DateValue(_dateSelected) + TimeValue(Left(aux, Find(" - ", aux) - 1)),
                         FechaTermino: DateValue(_dateSelected) + TimeValue(Mid(aux, Find(" - ", aux) + 3, Len(aux))),
-                        EspacioDeportivo: Dropdown2_1.Selected,
+                        EspacioDeportivo: Dropdown2_6.Selected,
                         Dias: AuxCollection
                     }
                 );
+                Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected<= DateValue(FechaTermino)));
                 Set(varShowPopUp,false)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
