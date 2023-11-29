@@ -322,13 +322,15 @@ Screen4 As screen:
                         )
                     )
                 Fill: |-
-                    =/*Fill value changes if the gallery item day = today, or if it lies outside of the current month*/             
+                    =/*
+                       El valor de relleno cambia si el día del elemento de la galería es hoy o si está fuera del mes actual.
+                    */
                     If(
-                        /*Date selected is today*/
+                        /* La fecha seleccionada es hoy y coincide con el día del elemento de la galería */
                         DateAdd(_firstDayInView, ThisItem.Value) = Today() && DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, RGBA(0,0,0,0),
-                        /*Today when it is not selected*/
+                        /* Hoy cuando no está seleccionado */
                         DateAdd(_firstDayInView, ThisItem.Value) = Today(), ColorFade(Subcircle1_5.Fill, 0.67), 
-                        /*The day is outside the range of the currently selected month*/
+                        /* El día está fuera del rango del mes actual seleccionado */
                         Abs(Self.Text - ThisItem.Value) > 10,RGBA(200, 200, 200, 0.3), RGBA(0, 0, 0, 0))
                 FocusedBorderColor: =Self.Color
                 FocusedBorderThickness: =2
@@ -350,8 +352,11 @@ Screen4 As screen:
                 TabIndex: =0
                 Text: =Day(DateAdd(_firstDayInView,ThisItem.Value, TimeUnit.Days))
                 Visible: |-
-                    =/*This item is in a row containing no days of the visible month. It is in the row after the row where the last day of the month occurs*/ 
-                     !(DateAdd(_firstDayInView,ThisItem.Value, TimeUnit.Days) - Weekday(DateAdd(_firstDayInView,ThisItem.Value, TimeUnit.Days)) + 1 > _lastDayOfMonth)
+                    =/*
+                       Este elemento está en una fila que no contiene días del mes visible. 
+                       Está en la fila después de la fila donde ocurre el último día del mes.
+                    */
+                    !(DateAdd(_firstDayInView,ThisItem.Value, TimeUnit.Days) - Weekday(DateAdd(_firstDayInView,ThisItem.Value, TimeUnit.Days)) + 1 > _lastDayOfMonth)
                 Width: =MonthDayGallery1_5.TemplateWidth
                 Wrap: =false
                 ZIndex: =3
@@ -709,7 +714,7 @@ Screen4 As screen:
                         Dias: AuxCollection  // Días de la semana seleccionados en la colección auxiliar
                     }
                 );
-                // Filtra reservas para incluir solo aquellas asociadas al espacio deportivo seleccionado
+                // Filtra reservas para incluir solo aquellas reservas asociadas al espacio deportivo seleccionado
                 Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));
                 // Filtra reservas adicionales por fecha dentro del rango definido por FechaInicio y FechaTermino
                 Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected<= DateValue(FechaTermino)));

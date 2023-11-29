@@ -6917,7 +6917,14 @@
           "NameMapSourceSchema": "?"
         },
         "FocusedBorderColor",
-        "Fill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "/*Fill value changes if the gallery item day = today, or if it lies outside of the current month*/             \nIf(\n    /*Date selected is today*/\n    DateAdd(_firstDayInView, ThisItem.Value) = Today() && DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, RGBA(0,0,0,0),\n    /*Today when it is not selected*/\n    DateAdd(_firstDayInView, ThisItem.Value) = Today(), ColorFade(Subcircle1_5.Fill, 0.67), \n    /*The day is outside the range of the currently selected month*/\n    Abs(Self.Text - ThisItem.Value) > 10,RGBA(200, 200, 200, 0.3), RGBA(0, 0, 0, 0))",
+          "InvariantPropertyName": "Fill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -6984,7 +6991,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Visible",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "/*This item is in a row containing no days of the visible month. It is in the row after the row where the last day of the month occurs*/ \n !(DateAdd(_firstDayInView,ThisItem.Value, TimeUnit.Days) - Weekday(DateAdd(_firstDayInView,ThisItem.Value, TimeUnit.Days)) + 1 > _lastDayOfMonth)",
+          "InvariantPropertyName": "Visible",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
