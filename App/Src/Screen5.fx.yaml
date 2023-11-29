@@ -166,35 +166,12 @@ Screen5 As screen:
         DisabledFill: =RGBA(166, 166, 166, 1)
         Fill: =RGBA(0, 56, 101, 1)
         FocusedBorderThickness: =4
-        Height: =64
+        Height: =72
         HoverFill: =RGBA(0, 56, 101, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
-        Width: =544
-        X: =73
-        Y: =340
+        Width: =640
+        Y: =788
         ZIndex: =9
-
-    Contáctanos_1 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Height: =44
-        LineHeight: =1.361816
-        PaddingBottom: =0
-        PaddingLeft: =0
-        PaddingRight: =0
-        PaddingTop: =0
-        Size: =18
-        Text: ="Contáctanos"
-        VerticalAlign: =VerticalAlign.Top
-        Width: =541
-        X: =76
-        Y: =348
-        ZIndex: =10
 
     "'image 1_2' As image":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -226,8 +203,8 @@ Screen5 As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =68
-        X: =8
-        Y: =337
+        X: =39
+        Y: =877
         ZIndex: =12
 
     "'image 6_2' As image":
@@ -282,4 +259,38 @@ Screen5 As screen:
         X: =39
         Y: =21
         ZIndex: =15
+
+    Label10 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =70
+        Size: =21
+        Text: ="Reservadeporte@udec.cl"
+        Width: =517
+        X: =123
+        Y: =877
+        ZIndex: =16
+
+    Label12 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =72
+        Size: =21
+        Text: ="Contacto"
+        Width: =640
+        Y: =788
+        ZIndex: =17
 
