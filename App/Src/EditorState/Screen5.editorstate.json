@@ -428,7 +428,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Ellipse 1_4",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -660,7 +660,7 @@
       "StyleName": "defaultImageStyle",
       "Type": "ControlInfo"
     },
-    "escudo 2_4": {
+    "escudo 2_6": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Image",
@@ -718,8 +718,8 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "escudo 2_4",
-      "ParentIndex": 2,
+      "Name": "escudo 2_6",
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3613,7 +3613,14 @@
         "X",
         "Y",
         "Width",
-        "Height",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Height",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "OnSelect",
         "minimumWidth",
         "minimumHeight",
@@ -3816,7 +3823,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle 4_4",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
