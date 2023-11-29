@@ -45,7 +45,7 @@ App As appinfo:
                 DateValue(FechaInicio) = DateValue(_dateSelected) && Text(EspacioDeportivo.Value) = EspacioSeleccionado
             )
         );
-    StartScreen: =iPhone142
+    StartScreen: =Screen5
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
