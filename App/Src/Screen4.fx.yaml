@@ -593,7 +593,39 @@ Screen4 As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
             OnSelect: |-
-                =Patch(
+                =ClearCollect(
+                    AuxCollection,
+                    Table(
+                        {
+                            Fecha: _dateSelected,
+                            NombreDia: Text(_dateSelected, "dddd"),
+                            ID: Switch(
+                                Text(_dateSelected, "dddd"),
+                                "lunes", 0,
+                                "martes", 1,
+                                "miércoles", 2,
+                                "jueves", 3,
+                                "viernes", 4,
+                                "sábado", 5,
+                                "domingo", 6,
+                                -1  // Valor por defecto en caso de que el día no coincida con ninguno de los anteriores
+                            ),
+                            Value: Switch(
+                                Text(_dateSelected, "dddd"),
+                                "lunes", "Lunes",
+                                "martes", "Martes",
+                                "miércoles", "Miércoles",
+                                "jueves", "Jueves",
+                                "viernes", "Viernes",
+                                "sábado", "Sábado",
+                                "domingo", "Domingo",
+                                "OtroValor"  // Valor por defecto en caso de que el día no coincida con ninguno de los anteriores
+                            )
+                        }
+                    )
+                );
+                
+                Patch(
                     Reservas,
                     Defaults(Reservas),
                     {
@@ -610,7 +642,8 @@ Screen4 As screen:
                         },
                         FechaInicio: DateValue(_dateSelected) + TimeValue(Left(aux, Find(" - ", aux) - 1)),
                         FechaTermino: DateValue(_dateSelected) + TimeValue(Mid(aux, Find(" - ", aux) + 3, Len(aux))),
-                        EspacioDeportivo: Dropdown2_1.Selected
+                        EspacioDeportivo: Dropdown2_1.Selected,
+                        Dias: AuxCollection
                     }
                 );
                 Set(varShowPopUp,false)
