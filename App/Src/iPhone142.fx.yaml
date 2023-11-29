@@ -147,7 +147,7 @@ iPhone142 As screen:
         PaddingRight: =0
         PaddingTop: =0
         Size: =18
-        Text: ="EVENTOS DEPORTIVOS UDEC"
+        Text: ="Evento Deportivos UDEC"
         VerticalAlign: =VerticalAlign.Top
         Width: =347
         X: =21
@@ -211,7 +211,7 @@ iPhone142 As screen:
         PaddingRight: =0
         PaddingTop: =0
         Size: =13.5
-        Text: ="Reserva de espacios deportivos"
+        Text: ="Reserva de Espacios Deportivos"
         VerticalAlign: =VerticalAlign.Top
         Width: =268
         X: =80
@@ -340,10 +340,10 @@ iPhone142 As screen:
         DisabledFill: =RGBA(166, 166, 166, 1)
         Fill: =RGBA(0, 56, 101, 1)
         FocusedBorderThickness: =4
-        Height: =41
+        Height: =49
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
-        Width: =197
+        Width: =390
         Y: =548
         ZIndex: =22
 
@@ -376,10 +376,10 @@ iPhone142 As screen:
         DisabledFill: =RGBA(166, 166, 166, 1)
         Fill: =RGBA(0, 56, 101, 1)
         FocusedBorderThickness: =4
-        Height: =41
+        Height: =45
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
-        Width: =197
+        Width: =390
         Y: =691
         ZIndex: =24
 
@@ -609,9 +609,10 @@ iPhone142 As screen:
         Height: =72
         Size: =15
         Text: |-
-            ="Bienvenido: " & User().FullName
+            ="Bienvenido: 
+            Denilson Junior"
         Width: =206
-        X: =97
-        Y: =21
+        X: =93
+        Y: =18
         ZIndex: =36
 
