@@ -38,7 +38,7 @@ Screen1 As screen:
             Text: |-
                 ="Espacio Deportivo: " & ThisItem.EspacioDeportivo.Value
             VerticalAlign: =VerticalAlign.Top
-            Width: =427
+            Width: =445
             X: =103
             Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle1.Size * 1.8)) / 2
             ZIndex: =2
@@ -67,11 +67,13 @@ Screen1 As screen:
             Color: =RGBA(0, 18, 107, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
             DisplayMode: |
-                =If(Today() < ThisItem.FechaInicio, DisplayMode.Edit, DisplayMode.Disabled)
+                =// Si la fecha actual es anterior a la fecha de inicio de este elemento, habilita el modo de edición; de lo contrario, deshabilita el modo de edición y no dejara eliminar la reserva
+                If(Today() < ThisItem.FechaInicio, DisplayMode.Edit, DisplayMode.Disabled)
             Height: =77
             Icon: =Icon.Trash
             OnSelect: |-
-                =ClearCollect(NuevaColleccion2, {ID: ThisItem.ID, Fecha1: ThisItem.FechaInicio, Fecha2: ThisItem.FechaTermino, Espacio1: ThisItem.EspacioDeportivo.Value});
+                =// Crea una nueva colección con información específica de la reserva seleccionada, para poder identificar la reserva que se desea eliminar
+                ClearCollect(NuevaColleccion2, {ID: ThisItem.ID, Fecha1: ThisItem.FechaInicio, Fecha2: ThisItem.FechaTermino, Espacio1: ThisItem.EspacioDeportivo.Value});
                 Set(Var3,true)
             PaddingBottom: =16
             PaddingLeft: =16
@@ -104,7 +106,9 @@ Screen1 As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =12
-            Text: =Text(ThisItem.FechaTermino, "dddd")
+            Text: |-
+                =// Muestra el día del mes en formato de día.
+                Text(ThisItem.FechaInicio, "dddd") 
             VerticalAlign: =VerticalAlign.Top
             Width: =Title1.Width
             X: =103
