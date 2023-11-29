@@ -488,12 +488,12 @@
             DisabledFill: =RGBA(166, 166, 166, 1)
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =4
-            Height: =333
+            Height: =385
             HoverFill: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(255, 255, 255, 1)
             Visible: =varShowPopUp
-            Width: =465
-            X: =87
+            Width: =548
+            X: =40
             Y: =367
             ZIndex: =19
 
@@ -512,8 +512,8 @@
             Size: =19
             Text: ="Confirmación de Reserva"
             Visible: =varShowPopUp
-            Width: =465
-            X: =87
+            Width: =548
+            X: =40
             Y: =324
             ZIndex: =20
 
@@ -530,8 +530,8 @@
             Size: =21
             Text: =EspacioSeleccionado
             Visible: =varShowPopUp
-            Width: =192
-            X: =381
+            Width: =234
+            X: =339
             Y: =405
             ZIndex: =21
 
@@ -548,8 +548,8 @@
             Size: =21
             Text: =_dateSelected
             Visible: =varShowPopUp
-            Width: =189
-            X: =339
+            Width: =261
+            X: =301
             Y: =461
             ZIndex: =22
 
@@ -567,8 +567,8 @@
             Text: |
                 =aux
             Visible: =varShowPopUp
-            Width: =201
-            X: =339
+            Width: =231
+            X: =309
             Y: =523
             ZIndex: =23
 
@@ -667,8 +667,8 @@
                 ="Espacio Deportivo : "
             Visible: =varShowPopUp
             Width: =279
-            X: =111
-            Y: =399
+            X: =60
+            Y: =397
             ZIndex: =27
 
         Label5 As label:
@@ -687,7 +687,7 @@
                 ="Fecha Solicitada: "
             Visible: =varShowPopUp
             Width: =247
-            X: =111
+            X: =60
             Y: =461
             ZIndex: =28
 
@@ -707,7 +707,7 @@
                 ="Hora Solicitada:"
             Visible: =varShowPopUp
             Width: =314
-            X: =111
+            X: =60
             Y: =520
             ZIndex: =29
 
