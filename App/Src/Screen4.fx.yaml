@@ -258,11 +258,13 @@ Screen4 As screen:
             Height: =372
             Items: =[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19, 20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]
             Layout: =Layout.Vertical
-            OnSelect: |
-                =Set(EspacioSeleccionado,Dropdown2_6.Selected.Value);
-                Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));
-                Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected<= DateValue(FechaTermino)));
-                Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
+            OnSelect: |+
+                =
+                Set(EspacioSeleccionado,Dropdown2_6.Selected.Value); // Seteo del espacio seleccionado para cambios en el dropdown de Espacio deportivo
+                Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado)); // Filtro de reservas basado en el espacio deportivo seleccionado
+                Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected<= DateValue(FechaTermino))); // Filtro adicional por fecha dentro del rango definido por FechaInicio y FechaTermino
+                Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value)); //Filtro adicional por días específicos de la semana (si se han definido en la columna 'Dias')
+                
             ShowScrollbar: =false
             TemplatePadding: =0
             TemplateSize: =60
