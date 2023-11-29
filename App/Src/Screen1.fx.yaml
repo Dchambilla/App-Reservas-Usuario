@@ -6,7 +6,10 @@ Screen1 As screen:
         DelayItemLoading: =true
         Height: =860
         Items: |-
-            =SortByColumns(If(
+            =// Ordena las reservas basándose en la columna "Fechainicio". 
+            // Si no se ha seleccionado ningún valor en el Dropdown, muestra todas las reservas del usuario actual.
+            // Si se ha seleccionado un valor en el Dropdown, muestra solo las reservas del usuario actual para el espacio deportivo seleccionado.
+            SortByColumns(If(
                 IsBlank(Dropdown2_2.SelectedText.Value),
                 Filter(Reservas, Usuario.Email = User().Email),
                 Filter(Reservas, Usuario.Email = User().Email, EspacioDeportivo.Value = Dropdown2_2.SelectedText.Value)
@@ -122,7 +125,9 @@ Screen1 As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(186, 202, 226, 1)
-        Items: =Distinct(Filter(Reservas, Usuario.Email = User().Email),EspacioDeportivo.Value)
+        Items: |-
+            =// Condición para seleccionar solo los espacios deportivos en los que se han realizado reservas para el usuario actual en el Dropdown
+            Distinct(Filter(Reservas, Usuario.Email = User().Email),EspacioDeportivo.Value)
         OnChange: =Set(EspacioSeleccionado,Dropdown2_2.Selected.Value)
         OnSelect: =
         PressedColor: =RGBA(255, 255, 255, 1)
@@ -302,7 +307,9 @@ Screen1 As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
             OnSelect: |-
-                =RemoveIf(Reservas, ID = Last(NuevaColleccion2).ID);
+                =// Elimina de la tabla Reservas la fila cuyo ID coincide con el ID de la última entrada en NuevaColleccion2.
+                RemoveIf(Reservas, ID = Last(NuevaColleccion2).ID);
+                // Establece la variable Var3 en falso para ocultar el PopUp
                 Set(Var3,false)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
@@ -377,7 +384,9 @@ Screen1 As screen:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 120, 212, 1)
         Height: =65
-        OnSelect: =Navigate(Screen5)
+        OnSelect: |-
+            =//Boton de retroceso a la pantalla principal
+            Navigate(Screen5)
         Width: =65
         X: =40
         Y: =38
