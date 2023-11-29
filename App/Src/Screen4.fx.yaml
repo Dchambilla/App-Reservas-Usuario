@@ -1,5 +1,6 @@
 Screen4 As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: =Set(_calendarVisible,true)
 
     "'Rectangle 4_5' As rectangle":
         BorderColor: =RGBA(0, 0, 0, 0)
