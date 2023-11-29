@@ -103,57 +103,6 @@ iPhone142 As screen:
         Y: =21
         ZIndex: =7
 
-    "'escudo 3' As image":
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =68
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Image: =image1339
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =54
-        X: =30
-        Y: =603
-        ZIndex: =8
-
-    "'Rectangle 13_2' As rectangle":
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        DisabledFill: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(0, 56, 101, 1)
-        FocusedBorderThickness: =4
-        Height: =66
-        HoverFill: =RGBA(0, 120, 212, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        Width: =390
-        Y: =456
-        ZIndex: =9
-
-    "'EVENTOS DEPORTIVOS UDEC' As label":
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Height: =29
-        LineHeight: =1.210227
-        PaddingBottom: =0
-        PaddingLeft: =0
-        PaddingRight: =0
-        PaddingTop: =0
-        Size: =18
-        Text: ="Evento Deportivos UDEC"
-        VerticalAlign: =VerticalAlign.Top
-        Width: =347
-        X: =21
-        Y: =475
-        ZIndex: =10
-
     "'Rectangle 13_3' As rectangle":
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -162,25 +111,12 @@ iPhone142 As screen:
         FocusedBorderThickness: =4
         Height: =41
         HoverFill: =RGBA(0, 56, 101, 1)
+        OnSelect: =Navigate(Screen1)
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =303
         X: =61
         Y: =213
         ZIndex: =12
-
-    "'Rectangle 14_1' As rectangle":
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        DisabledFill: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(0, 56, 101, 1)
-        FocusedBorderThickness: =4
-        Height: =41
-        HoverFill: =RGBA(0, 56, 101, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        Width: =303
-        X: =61
-        Y: =277
-        ZIndex: =13
 
     "'Rectangle 12_2' As rectangle":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -190,6 +126,7 @@ iPhone142 As screen:
         FocusedBorderThickness: =4
         Height: =41
         HoverFill: =RGBA(0, 56, 101, 1)
+        OnSelect: =Navigate(Screen3)
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =303
         X: =61
@@ -206,6 +143,7 @@ iPhone142 As screen:
         FocusedBorderThickness: =4
         Height: =25
         LineHeight: =1.361816
+        OnSelect: =Navigate(Screen3)
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingRight: =0
@@ -240,42 +178,6 @@ iPhone142 As screen:
         Y: =221
         ZIndex: =16
 
-    "'Dudas e inquietudes' As label":
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Height: =25
-        LineHeight: =1.361816
-        PaddingBottom: =0
-        PaddingLeft: =0
-        PaddingRight: =0
-        PaddingTop: =0
-        Size: =13.5
-        Text: ="Dudas e inquietudes"
-        VerticalAlign: =VerticalAlign.Top
-        Width: =177
-        X: =126
-        Y: =285
-        ZIndex: =17
-
-    "'Rectangle 15_1' As rectangle":
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        DisabledFill: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(0, 56, 101, 1)
-        FocusedBorderThickness: =4
-        Height: =41
-        HoverFill: =RGBA(0, 56, 101, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        Width: =303
-        X: =61
-        Y: =344
-        ZIndex: =18
-
     "'Rectangle 16_1' As rectangle":
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -286,8 +188,8 @@ iPhone142 As screen:
         HoverFill: =RGBA(0, 56, 101, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =303
-        X: =61
-        Y: =406
+        X: =60
+        Y: =277
         ZIndex: =19
 
     Contáctanos As label:
@@ -308,102 +210,9 @@ iPhone142 As screen:
         Text: ="Contáctanos"
         VerticalAlign: =VerticalAlign.Top
         Width: =110
-        X: =159
-        Y: =414
+        X: =158
+        Y: =285
         ZIndex: =20
-
-    Sugerencias_1 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Height: =25
-        LineHeight: =1.361816
-        PaddingBottom: =0
-        PaddingLeft: =0
-        PaddingRight: =0
-        PaddingTop: =0
-        Size: =13.5
-        Text: ="Sugerencias"
-        VerticalAlign: =VerticalAlign.Top
-        Width: =106
-        X: =161
-        Y: =352
-        ZIndex: =21
-
-    "'Rectangle 17_1' As rectangle":
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        DisabledFill: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(0, 56, 101, 1)
-        FocusedBorderThickness: =4
-        Height: =49
-        HoverFill: =RGBA(0, 120, 212, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        Width: =390
-        Y: =548
-        ZIndex: =22
-
-    "'Próximo partido:' As label":
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Height: =25
-        LineHeight: =1.361816
-        PaddingBottom: =0
-        PaddingLeft: =0
-        PaddingRight: =0
-        PaddingTop: =0
-        Size: =13.5
-        Text: |-
-            ="Próximo partido:"
-        VerticalAlign: =VerticalAlign.Top
-        Width: =146
-        X: =9
-        Y: =557
-        ZIndex: =23
-
-    "'Rectangle 18_1' As rectangle":
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        DisabledFill: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(0, 56, 101, 1)
-        FocusedBorderThickness: =4
-        Height: =45
-        HoverFill: =RGBA(0, 120, 212, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        Width: =390
-        Y: =691
-        ZIndex: =24
-
-    "'Noticias UdeC' As label":
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Height: =25
-        LineHeight: =1.361816
-        PaddingBottom: =0
-        PaddingLeft: =0
-        PaddingRight: =0
-        PaddingTop: =0
-        Size: =13.5
-        Text: ="Noticias UdeC"
-        VerticalAlign: =VerticalAlign.Top
-        Width: =122
-        X: =11
-        Y: =700
-        ZIndex: =25
 
     "'image 1_1' As image":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -422,147 +231,6 @@ iPhone142 As screen:
         Y: =209
         ZIndex: =26
 
-    "'image 2' As image":
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =95
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Image: =image1343
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =41
-        X: =159
-        Y: =576
-        ZIndex: =27
-
-    "'V/S' As label":
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(0, 56, 101, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Height: =33
-        LineHeight: =1.361816
-        PaddingBottom: =0
-        PaddingLeft: =0
-        PaddingRight: =0
-        PaddingTop: =0
-        Size: =18
-        Text: ="V/S"
-        VerticalAlign: =VerticalAlign.Top
-        Width: =41
-        X: =103
-        Y: =623
-        ZIndex: =28
-
-    Basketball As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(0, 56, 101, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Height: =33
-        LineHeight: =1.361816
-        PaddingBottom: =0
-        PaddingLeft: =0
-        PaddingRight: =0
-        PaddingTop: =0
-        Size: =18
-        Text: ="Basketball"
-        VerticalAlign: =VerticalAlign.Top
-        Width: =120
-        X: =258
-        Y: =597
-        ZIndex: =29
-
-    "'Lu, 16 Ene.' As label":
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(0, 56, 101, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Height: =36
-        LineHeight: =1.361816
-        PaddingBottom: =0
-        PaddingLeft: =0
-        PaddingRight: =0
-        PaddingTop: =0
-        Size: =15
-        Text: ="Lu, 16 Ene. "
-        VerticalAlign: =VerticalAlign.Top
-        Width: =125
-        X: =253
-        Y: =624
-        ZIndex: =30
-
-    "'MAS INFORMACION' As label":
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(0, 56, 101, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        FontWeight: =FontWeight.Bold
-        Height: =36
-        LineHeight: =1.361816
-        PaddingBottom: =0
-        PaddingLeft: =0
-        PaddingRight: =0
-        PaddingTop: =0
-        Size: =9.75
-        Text: ="MAS INFORMACION"
-        Underline: =true
-        VerticalAlign: =VerticalAlign.Top
-        Width: =139
-        X: =245
-        Y: =664
-        ZIndex: =31
-
-    "'image 3_1' As image":
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =56
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Image: =image1359
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =56
-        X: =5
-        Y: =276
-        ZIndex: =32
-
-    "'image 4_1' As image":
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =46
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Image: =image1361
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =47
-        X: =7
-        Y: =341
-        ZIndex: =33
-
     "'image 5_1' As image":
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -576,8 +244,7 @@ iPhone142 As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =56
-        X: =1
-        Y: =394
+        Y: =265
         ZIndex: =34
 
     "'image 6_1' As image":
