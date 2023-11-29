@@ -172,10 +172,11 @@ Screen4 As screen:
             Height: =45
             Icon: =Icon.BackArrow
             OnSelect: |
-                =Set(EspacioSeleccionado,Dropdown2_6.Selected.Value);
-                Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));
-                Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected<= DateValue(FechaTermino)));
-                Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
+                =Set(_firstDayOfMonth, DateAdd(_firstDayOfMonth, -1, TimeUnit.Months));
+                Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
+                Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
+                /*collects calendar events for all days in current month view. Updates _minDate to prevent duplicate data collection if user returns to this month view*/
+                If(_minDate > _firstDayOfMonth, Set(_minDate, _firstDayOfMonth));
             PaddingBottom: =7
             PaddingLeft: =7
             PaddingRight: =7
@@ -201,11 +202,12 @@ Screen4 As screen:
                 )
             Height: =45
             Icon: =Icon.NextArrow
-            OnSelect: |
-                =Set(EspacioSeleccionado,Dropdown2_6.Selected.Value);
-                Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));
-                Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected<= DateValue(FechaTermino)));
-                Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value));
+            OnSelect: |-
+                =Set(_firstDayOfMonth, DateAdd(_firstDayOfMonth, 1, TimeUnit.Months));
+                Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
+                /*collects calendar events for all days in current month view. Updates _maxDate to prevent duplicate data collection if user returns to this month view*/
+                Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
+                If(_lastDayOfMonth > _maxDate, Set(_maxDate, _lastDayOfMonth);)
             PaddingBottom: =7
             PaddingLeft: =7
             PaddingRight: =7
@@ -388,20 +390,18 @@ Screen4 As screen:
                 PaddingRight: =0
                 PaddingTop: =0
                 Size: =13
-                Text: |-
-                    =    If(
-                            CountRows(
-                                Filter(
-                                    Reservas,
-                                    DateValue(FechaInicio) = DateValue(_dateSelected) && TimeValue(FechaInicio) = TimeValue(Left(ThisItem.Value, 5)) && Text(EspacioDeportivo.Value) = EspacioSeleccionado
-                                )
-                            ) > 0,
-                            "Reservado",
-                            "Disponible"
-                        )
-                    
-                    
-                     
+                Text: |
+                    =
+                    If(
+                        CountRows(
+                            Filter(
+                                FiltradoFecha,
+                                TimeValue(FechaInicio) <= TimeValue(Left(ThisItem.Value, 5)) && TimeValue(FechaTermino) >= TimeValue(Right(ThisItem.Value, 5))
+                            )
+                        ) > 0,
+                        "Reservado",
+                        "Disponible"
+                    )
                 VerticalAlign: =VerticalAlign.Top
                 Width: =107
                 X: =Title3_1.X
