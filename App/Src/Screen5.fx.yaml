@@ -107,7 +107,7 @@ Screen5 As screen:
         FocusedBorderThickness: =4
         Height: =63
         HoverFill: =RGBA(0, 56, 101, 1)
-        OnSelect: =Navigate(Screen3)
+        OnSelect: =Navigate(Screen4)
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =544
         X: =73
@@ -124,7 +124,7 @@ Screen5 As screen:
         FocusedBorderThickness: =4
         Height: =38
         LineHeight: =1.361816
-        OnSelect: =Navigate(Screen3)
+        OnSelect: =Navigate(Screen4)
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingRight: =0
@@ -147,6 +147,7 @@ Screen5 As screen:
         FocusedBorderThickness: =4
         Height: =44
         LineHeight: =1.361816
+        OnSelect: =Navigate(Screen1)
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingRight: =0
@@ -261,8 +262,8 @@ Screen5 As screen:
             ="Bienvenido: 
             Denilson Junior"
         Width: =306
-        X: =198
-        Y: =36
+        X: =192
+        Y: =37
         ZIndex: =14
 
     "'escudo 2_6' As image":

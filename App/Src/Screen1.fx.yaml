@@ -4,7 +4,7 @@ Screen1 As screen:
     "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =971
+        Height: =860
         Items: |-
             =SortByColumns(If(
                 IsBlank(Dropdown2_2.SelectedText.Value),
@@ -18,7 +18,7 @@ Screen1 As screen:
         Selectable: =false
         TemplatePadding: =0
         TemplateSize: =111
-        Y: =165
+        Y: =275
         ZIndex: =1
 
         Title1 As label:
@@ -64,7 +64,7 @@ Screen1 As screen:
             Color: =RGBA(0, 18, 107, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
             DisplayMode: |
-                =If(Today() > ThisItem.FechaInicio, DisplayMode.Edit, DisplayMode.Disabled)
+                =If(Today() < ThisItem.FechaInicio, DisplayMode.Edit, DisplayMode.Disabled)
             Height: =77
             Icon: =Icon.Trash
             OnSelect: |-
@@ -108,73 +108,42 @@ Screen1 As screen:
             Y: =74
             ZIndex: =7
 
-    Icon1 As icon.BackArrow:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        Color: =RGBA(0, 120, 212, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(220, 220, 220, 1)
-        DisabledFill: =RGBA(0, 0, 0, 0)
+    Dropdown2_2 As dropdown:
+        AllowEmptySelection: =true
+        BorderColor: =RGBA(0, 18, 107, 1)
+        ChevronBackground: =RGBA(56, 96, 178, 1)
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(186, 202, 226, 1)
+        Items: =Distinct(Filter(Reservas, Usuario.Email = User().Email),EspacioDeportivo.Value)
+        OnChange: =Set(EspacioSeleccionado,Dropdown2_2.Selected.Value)
+        OnSelect: =
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 18, 107, 1)
+        SelectionFill: =RGBA(56, 96, 178, 1)
+        Size: =13
+        X: =156
+        Y: =212
+        ZIndex: =2
+
+    "'Rectangle 4_6' As rectangle":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(0, 56, 101, 1)
         FocusedBorderThickness: =4
-        Height: =65
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Icon: =Icon.BackArrow
-        OnSelect: =Navigate(Screen5)
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =68
-        X: =15
-        Y: =51
-        ZIndex: =4
-
-    SelectorEspacioDeportivo_1 As group:
-        Height: =5
-        Width: =5
-        X: =33
-        Y: =36
-        ZIndex: =4
-
-        Dropdown2_2 As dropdown:
-            AllowEmptySelection: =true
-            BorderColor: =RGBA(0, 18, 107, 1)
-            ChevronBackground: =RGBA(56, 96, 178, 1)
-            ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-            ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-            ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
-            ChevronHoverFill: =RGBA(255, 255, 255, 1)
-            Default: =
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            HoverColor: =RGBA(0, 0, 0, 1)
-            HoverFill: =RGBA(186, 202, 226, 1)
-            Items: =Distinct(Filter(Reservas, Usuario.Email = User().Email),EspacioDeportivo.Value)
-            OnChange: =Set(EspacioSeleccionado,Dropdown2_2.Selected.Value)
-            OnSelect: =
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(0, 18, 107, 1)
-            SelectionFill: =RGBA(56, 96, 178, 1)
-            Size: =13
-            X: =156
-            Y: =76
-            ZIndex: =2
-
-        Label1_2 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 18, 107, 1)
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Lato Black'
-            FontWeight: =FontWeight.Bold
-            Height: =38
-            Size: =13
-            Text: ="Espacio Deportivo"
-            Width: =332
-            X: =154
-            Y: =31
-            ZIndex: =3
+        Height: =141
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =640
+        ZIndex: =13
 
     Group1 As group:
         Height: =5
@@ -349,4 +318,68 @@ Screen1 As screen:
             X: =107
             Y: =655
             ZIndex: =12
+
+    "'escudo 2_7' As image":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =118
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: =image29140
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =128
+        X: =256
+        Y: =19
+        ZIndex: =14
+
+    "'Rectangle 12_6' As rectangle":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(0, 56, 101, 1)
+        FocusedBorderThickness: =4
+        Height: =49
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =507
+        X: =72
+        Y: =151
+        ZIndex: =15
+
+    "'Reserva de espacios deportivos_5' As label":
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(255, 251.8125, 251.8125, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Height: =24
+        LineHeight: =1.361816
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =13.5
+        Text: ="Espacio Deportivo"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =496
+        X: =83
+        Y: =161
+        ZIndex: =16
+
+    Arrow1_2 As arrow.backArrow:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(0, 120, 212, 1)
+        Height: =65
+        OnSelect: =Navigate(Screen5)
+        Width: =65
+        X: =40
+        Y: =38
+        ZIndex: =17
 
