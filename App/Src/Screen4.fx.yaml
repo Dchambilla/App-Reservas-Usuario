@@ -37,6 +37,10 @@ Screen4 As screen:
             _calendarVisible,
             true
         );
+        If(
+            IsBlank(Dropdown2_6.Selected.Value),
+            Set(EspacioSeleccionado, "Cancha Hockey")
+        );
 
     "'Rectangle 4_5' As rectangle":
         BorderColor: =RGBA(0, 0, 0, 0)
