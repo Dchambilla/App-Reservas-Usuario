@@ -41,11 +41,7 @@ Screen4 As screen:
             _calendarVisible,
             true
         );
-        
-        If(
-            IsBlank(Dropdown2_6.Selected.Value),
-            Set(EspacioSeleccionado, "Cancha Hockey")
-        );
+        Set(EspacioSeleccionado, "Cancha Hockey");
         Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));// Filtrado de reservas para incluir solo aquellas asociadas al espacio deportivo seleccionado
         Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected<= DateValue(FechaTermino))); // Filtrado adicional por fecha, seleccionando reservas dentro del rango definido por FechaInicio y FechaTermino
         Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value)); // Filtrado adicional por días específicos de la semana (si se han definido en la columna 'Dias')
