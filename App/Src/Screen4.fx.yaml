@@ -311,7 +311,7 @@ Screen4 As screen:
                 Color: =If(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, RGBA(255, 255, 255, 1), DateAdd(_firstDayInView, ThisItem.Value) = Today(), RGBA(47, 41, 43, 1), LblMonthSelected1_5.Color)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =
-                DisplayMode: |
+                DisplayMode: |-
                     =With(
                         {
                             calendarDate: DateAdd(
@@ -322,24 +322,27 @@ Screen4 As screen:
                         If(
                             Or(
                                 calendarDate < Today(),
-                                Weekday(calendarDate) in [1.7] ||
-                                Abs(Self.Text - ThisItem.Value) > 10
+                                Weekday(calendarDate) in [1.7],
+                                Abs(Self.Text - ThisItem.Value) > 10,
+                                Weekday(DateAdd(_firstDayInView, ThisItem.Value)) = 1
                             ),
                             DisplayMode.Disabled,
                             DisplayMode.Edit
                         )
                     )
                 Fill: |-
-                    =/*
-                       El valor de relleno cambia si el día del elemento de la galería es hoy o si está fuera del mes actual.
-                    */
+                    =With(
+                        {
+                            calendarDate: DateAdd(
+                                _firstDayInView,
+                                ThisItem.Value
+                            )
+                        },
                     If(
-                        /* La fecha seleccionada es hoy y coincide con el día del elemento de la galería */
-                        DateAdd(_firstDayInView, ThisItem.Value) = Today() && DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, RGBA(0,0,0,0),
-                        /* Hoy cuando no está seleccionado */
-                        DateAdd(_firstDayInView, ThisItem.Value) = Today(), ColorFade(Subcircle1_5.Fill, 0.67), 
-                        /* El día está fuera del rango del mes actual seleccionado */
-                        Abs(Self.Text - ThisItem.Value) > 10,RGBA(200, 200, 200, 0.3), RGBA(0, 0, 0, 0))
+                        Or(calendarDate < Today(),Weekday(calendarDate) in [1.7]), RGBA(200, 200, 200, 0.3),
+                        calendarDate = Today() && calendarDate = _dateSelected, RGBA(0,0,0,0),
+                        calendarDate = Today(), ColorFade(Subcircle1_2.Fill, 0.67),
+                        Abs(Self.Text - ThisItem.Value) > 10, RGBA(200, 200, 200, 0.3), RGBA(0, 0, 0, 0)))
                 FocusedBorderColor: =Self.Color
                 FocusedBorderThickness: =2
                 Height: =MonthDayGallery1_5.TemplateHeight
