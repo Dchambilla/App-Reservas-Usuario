@@ -340,7 +340,8 @@ Screen4 As screen:
                         )
                     )
                 Fill: |-
-                    =With(
+                    =//No permitir seleccionar los dias domingos para alguna reserva
+                    With(
                         {
                             calendarDate: DateAdd(
                                 _firstDayInView,
