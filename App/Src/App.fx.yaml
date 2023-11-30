@@ -37,7 +37,7 @@ App As appinfo:
             NombreUsuario,
             User().FullName
         );
-        Set(EspacioSeleccionado, "Bascket");
+        Set(EspacioSeleccionado, "Cancha Hockey");
         ClearCollect(
             TablaFiltrada,
             Filter(
