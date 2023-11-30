@@ -312,21 +312,30 @@ Screen4 As screen:
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =
                 DisplayMode: |-
-                    =With(
+                    =// Con el contexto creado para la fecha del calendario, evalúa las condiciones para determinar el modo de visualización.
+                    With(
                         {
                             calendarDate: DateAdd(
                                 _firstDayInView,
                                 ThisItem.Value
                             )
                         },
+                    // Evalúa las condiciones que desencadenan el modo de visualización.
+                    
                         If(
-                            Or(
+                            Or(   
+                                // Si la fecha es anterior a la fecha actual.
                                 calendarDate < Today(),
+                                // Si es fin de semana (sábado o domingo).
                                 Weekday(calendarDate) in [1.7],
+                                // Si la distancia entre los elementos en la galería es mayor que 10.
                                 Abs(Self.Text - ThisItem.Value) > 10,
+                                // Si es el primer día de la semana (lunes).
                                 Weekday(DateAdd(_firstDayInView, ThisItem.Value)) = 1
                             ),
+                            // Si alguna de las condiciones es verdadera, deshabilita el modo de edición.
                             DisplayMode.Disabled,
+                            // Si ninguna de las condiciones es verdadera, habilita el modo de edición.
                             DisplayMode.Edit
                         )
                     )
