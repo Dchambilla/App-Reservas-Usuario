@@ -1,7 +1,10 @@
 Screen4 As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |
-        =// Establece la fecha seleccionada como la fecha actual.
+        =Set(FiltradoEspacio, Filter(Reservas, EspacioDeportivo.Value = EspacioSeleccionado));// Filtrado de reservas para incluir solo aquellas asociadas al espacio deportivo seleccionado
+        Set(FiltradoFecha, Filter(FiltradoEspacio, _dateSelected >= DateValue(FechaInicio) && _dateSelected<= DateValue(FechaTermino))); // Filtrado adicional por fecha, seleccionando reservas dentro del rango definido por FechaInicio y FechaTermino
+        Set(FiltradoDias, Filter(FiltradoFecha, !IsBlank(Dias) && Text(_dateSelected,"dddd") in Dias.Value)); // Filtrado adicional por días específicos de la semana (si se han definido en la columna 'Dias')
+        // Establece la fecha seleccionada como la fecha actual.
         Set(
             _dateSelected,
             Today()
