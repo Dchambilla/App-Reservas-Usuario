@@ -190,23 +190,6 @@ Screen5 As screen:
         Y: =259
         ZIndex: =11
 
-    "'image 5_2' As image":
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =70
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Image: =image1363
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =68
-        X: =39
-        Y: =877
-        ZIndex: =12
-
     "'image 6_2' As image":
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -233,14 +216,13 @@ Screen5 As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =77
+        Height: =102
         Size: =18
         Text: |-
-            ="Bienvenido: 
-            Denilson Junior"
+            ="Bienvenido: " & User().FullName
         Width: =306
-        X: =192
-        Y: =37
+        X: =167
+        Y: =21
         ZIndex: =14
 
     "'escudo 2_6' As image":
@@ -293,4 +275,22 @@ Screen5 As screen:
         Width: =640
         Y: =788
         ZIndex: =17
+
+    Icon2 As icon.Mail:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(0, 60, 106, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Mail
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        X: =49
+        Y: =883
+        ZIndex: =19
 
