@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "5e7a9e72-2dc2-4e74-b3df-2a70fb511af0",
+    "Name": "PowerAppV2->Enviarcorreoelectrónico(V2)",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": null
+  }
+]

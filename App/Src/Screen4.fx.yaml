@@ -744,6 +744,7 @@ Screen4 As screen:
                 // Convierte el día seleccionado a mayúsculas y guarda en la colección DiaSeleccionado
                 ClearCollect(DiaSeleccionado,Upper(Left(Text(_dateSelected, "dddd"), 1)) & Mid(Text(_dateSelected, "dddd"), 2, Len(Text(_dateSelected, "dddd"))));
                 // Oculta el PopUp de confirmación de reserva una vez que se ha enviado el formulario de solicitud
+                'PowerAppV2->Enviarcorreoelectrónico(V2)'.Run(User().Email,EspacioSeleccionado,Text(_dateSelected,DateTimeFormat.ShortDate),aux,User().FullName);
                 Set(varShowPopUp,false)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
