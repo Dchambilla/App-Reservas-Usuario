@@ -1,10 +1,12 @@
 Screen4 As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |-
-        =Set(
+        =// Establece la fecha seleccionada como la fecha actual.
+        Set(
             _dateSelected,
             Today()
         );
+        // Establece el primer día del mes actual.
         Set(
             _firstDayOfMonth,
             DateAdd(
@@ -13,6 +15,7 @@ Screen4 As screen:
                 TimeUnit.Days
             )
         );
+        // Establece el primer día visible en el calendario, retrocediendo a la primera fila completa antes del mes.
         Set(
             _firstDayInView,
             DateAdd(
@@ -21,6 +24,7 @@ Screen4 As screen:
                 TimeUnit.Days
             )
         );
+        // Establece el último día del mes actual.
         Set(
             _lastDayOfMonth,
             DateAdd(
@@ -114,7 +118,7 @@ Screen4 As screen:
         ChevronDisabledFill: =RGBA(244, 244, 244, 1)
         ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
         ChevronHoverFill: =RGBA(255, 255, 255, 1)
-        Default: =First(Choices([@Reservas].EspacioDeportivo)).Value
+        Default: ="Cancha Hockey"
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
